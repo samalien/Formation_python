@@ -43,12 +43,14 @@ Q2 = create_multipleChoice_widget('print(4/2 - 7*7)',['Correct','Incorrect'],'Co
 Q3 = create_multipleChoice_widget('print((1 + 2 + 4) / 13',['Correct','Incorrect'],'Incorrect')
 Q4 = create_multipleChoice_widget(' Si nous ajoutons maintenant cette nouvelle 5ème ligne de code à ce qui précède, quelle sera la sortie ? >>> print(crs_per_rab) ',['0,5','2.0','3.0','Aucune de ces réponses'],'3.0')
 
+Q1_chaines = create_multipleChoice_widget('',['49 (and tropical_fruit_count is a string)','49 (and tropical_fruit_count is an integer)','3415 (and tropical_fruit_count is a string)','3415 (and tropical_fruit_count is an integer)'],'3415 (and tropical_fruit_count is a string)')
 
-
+Q2_chaines = create_multipleChoice_widget('Nous venons d\'utiliser la fonction len pour trouver la longueur des chaînes. Que renvoie la fonction len lorsque nous lui donnons l\'entier 835 au lieu d\'une chaîne ?',['835','3','2','Error'],'Error')
 
 #--------------------------------------------------------------------------------------
 data = {"del = 1":"data_1", "delware = 1":"data_2", "1 de = first":"data_3", "de = 1":"data_4"}
 responses = ["delware = 1", "de = 1"]
+
 data2 = {"Combien de personnes sont venues lors de votre voyage de pêche ?":"data_1", 
         "Longueur d'un poisson que vous avez pêché en mètres":"data_2", 
         "nombre de poissons pêché":"data_3", "Temps qu'il a fallu pour pour attraper le premier poisson, en heures":"data_4"}
@@ -56,6 +58,19 @@ responses2 = ["Longueur d'un poisson que vous avez pêché en mètres", "Temps q
 
 data3 = {"Pour qu'il soit long de deux caracères comme !=":"data_1", "parce que = est utilisé pour affecter des variables":"data_2", "l'un ou l'autre fonctionne":"data_3", "parce que = est utilisé pour vérifier si deux valeurs sont approximativement égales":"data_4"}
 responses3 = ["parce que = est utilisé pour affecter des variables"]
+
+data4 = {"s[3], s[1 + 1 + 1]":"data_1", "s[0], (s + s)[0]":"data_2", "s[0] + s[1], s[0 + 1]":"data_3", "s[1], (s + 'ity')[1]":"data_4","s[-1], (s + s)[-1]":"data_5"}
+responses4 = ["s[3], s[1 + 1 + 1]", "s[0], (s + s)[0]","s[-1], (s + s)[-1]"]
+
+data5 = {"s[:]":"data_1", "s + s[0:-1+1]":"data_2", "s[0:]":"data_3", "s[:-1]":"data_4","s[:3] + s[3:]":"data_5"}
+responses5 = ["s[:]", "s + s[0:-1+1]","s[0:]","s[:3] + s[3:]"]
+
+data6 = {"'test'.find('t')":"data_1", "'test'.find('st')":"data_2", "'Test'.find('te')":"data_3", "'west'.find('test')":"data_4"}
+responses6 = ["'Test'.find('te')", "'west'.find('test')"]
+
+data7 = {"s.find(s)":"data_1", "s.find('s')":"data_2", "'s'.find('s')":"data_3", "s.find('')":"data_4","s.find(s + '!!!') + 1":"data_5"}
+responses7 = ["s.find(s)", "'s'.find('s')", "s.find('')","s.find(s + '!!!') + 1"]
+
 def quiz_checkBox(data, responses):
     feedback_out = widgets.Output()
     names = []
